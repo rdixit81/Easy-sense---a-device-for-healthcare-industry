@@ -1,0 +1,262 @@
+<html>
+	<head>
+		<title> Easy Sense </title>
+		<style type = "text/css">
+		p {
+		margin: 50px;
+		}
+		h1{
+			background-image: url("img/img1.jpg");
+			width: 100%;
+			height: 55%;
+			margin: 0;
+			resize: vertical;
+		}
+		h2{
+			margin: 0;
+			width: 100%;
+			font-size: 30px;
+			text-align: center;
+			font-family: verdana;
+			color: #0B0031;
+			background-color: #5130C0;
+		}
+		body{
+			display: inline;
+		}
+		.Container1 {
+			background-image: url("img/3.jpg");
+			position: left;
+			top: 250px;
+			right: 2%;
+			width: 45%;
+			height: 100%;
+			background-color: white;
+			border: 3px solid #5130C0;
+		}
+		.Container2 {
+			background-image: url("img/3.jpg");
+			opacity: 1.1;
+			position: absolute;
+			top: 400px;
+			right: 2%;
+			width: 45%;
+			height: 100%;
+			border: 3px solid #5130C0;
+			background-color: white;	
+		}
+		.container3{
+			border-radius: 10px;
+			background-color: #5130C0;
+			font-size: 23px;
+			font-family: "Times New Roman", Times, serif;
+			font-style: bold;	
+		}
+		div {
+			border-style: solid;
+			border-width: 5px;
+			border-radius: 0px;
+			border-color: #AEE4F7;
+		    background-color: #AEE4F7;
+		    padding: 20px;
+			text-align: center;
+		}
+		span {
+		    padding: 12px 20px;
+			font-size: 30px;
+			font-family: "Times New Roman", Times, serif;
+		    margin: 8px 0;
+			width: 80%;
+			height: 40%;
+		    display: inline-block;
+		    border: 3px solid black;
+		    box-sizing: border-box;
+		}
+		input[type=text], select {
+		    padding: 12px 20px;
+			font-size: 20px;
+			font-family: "Times New Roman", Times, serif;
+		    margin: 8px 0;
+			width: 50%;
+		    display: inline-block;
+		    border: 3px solid black;
+		    box-sizing: border-box;
+		}
+		input[type=number], select {
+		    padding: 12px 20px;
+			font-size: 20px;
+			font-family: "Times New Roman", Times, serif;
+		    margin: 8px 0;
+			width: 50%;
+		    display: inline-block;
+		    border: 3px solid black;
+		    box-sizing: border-box;
+		}
+		input[type=date], select {
+		    padding: 12px 20px;
+			font-size: 5vw;
+			font-family: "Times New Roman", Times, serif;
+		    margin: 8px 0;
+			width: 50%;
+		    display: inline-block;
+		    border: 3px solid black;
+		    box-sizing: border-box;
+		}
+		label{
+			text-align: right;
+			font-size: 2vw;
+			font-family: "Times New Roman", Times, serif;
+			font-style: bold;
+			width: 30%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 3px solid black;
+		    box-sizing: border-box;
+		}
+		button{
+			width: 30%;
+			border: 3px solid black;
+			font-size: 20px;
+			background-color: lightblue;
+		}
+		p{
+			padding: 12px 20px;
+			font-size: 20px;
+			font-family: "Times New Roman", Times, serif;
+		    margin: 8px 0;
+			width: 40%;
+			height:10%;
+		    display: inline-block;
+		    border: 3px solid black;
+		    box-sizing: border-box;
+		    position: relative;
+		    background-color: white;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<h1></h1>
+		<h2>CENTRALIZED PATIENT INFORMATION SYSTEM</h2>
+		<div>
+			<div class='Container1'>
+				<h2>Update Data</h2>
+				<label for="Name">Name</label>
+				<input id="Name" type="text">
+				</br>
+				<label for="date">Date</label> 
+				<input id="date" type="text">
+				</br>
+				<label for="Heartbeat">Heartbeat </label>
+				<!--<p id = "Heartbeat">Heartbeat</p>-->
+				<input id="Heartbeat" type="text" style="width:40%"> 
+				<button onclick="Refresh1()" style="width:10%;height: 53px">R</button>
+				</br>
+				<label for="Temperature">Temperature </label>
+				<input id="Temperature" type="text" style="width:40%">
+				<!--<p id = "Temperature">Temperature</p>-->
+				<button onclick="Refresh2()" style="width:10%;height: 53px">R</button>
+				</br>
+				<label for="Prescription">Prescription </label>
+				<input id="Prescription" type="text">
+				</br>
+				<label for="Disease">Disease</label>
+				<input id="Disease" type="text">
+				</br>
+				<label for="Symptoms">Symptoms</label>
+				<input id="Symptoms" type="text">
+				<button onclick="update()">Update Date </button>
+			</div>
+			<div class='Container2'>
+				<h2>Get Information</h2>
+				<label for="Name">Name</label>
+				<input id="Namee" type="text">
+				</br>
+				<label for="date">Date</label> 
+				<input id="datee" type="text">
+				</br>
+				<label for="Eneterd Symptoms: " style="width:80%; text-align: center">Entered Details </label> 
+				<br>
+				<span id = "Symptomse"> </span>
+				<br>
+				<br>
+				<br>
+				<button id = "get" onclick = read()> Get Information </button>
+			</div>
+			</br>
+			<div class = 'container3'>
+				<address>NH-67, Karur - Trichy Highways, Puliyur CF, Karur. Tamil Nadu. Pin:639114 India. +91 93450 02630, +91 93607 02630, </address>
+			</div>	
+		</div>
+	</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+var config = {
+    apiKey: "*********************************************************",
+    authDomain: "***********************************************",
+    databaseURL: "**************************************************",
+    projectId: "*********************",
+    storageBucket: "**************************",
+    messagingSenderId: "********************************"
+};
+firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+function writeUserData(Name, date,Temperature, Heartbeat, Disease, Priscription, Symptoms) {
+   firebase.database().ref('/' + Name + '/'+ date).set({
+   Temperature: Temperature,
+   Heartbeat: Heartbeat,
+   Disease: Disease,
+   Prescription: Prescription,
+   Symptoms: Symptoms
+  });
+}
+
+function update() {
+	Name = document.getElementById("Name").value;
+	date = document.getElementById("date").value;
+	Temperature = document.getElementById("Temperature").value;
+	Heartbeat = document.getElementById("Heartbeat").value;
+	Disease = document.getElementById("Disease").value;
+	Prescription = document.getElementById("Prescription").value;
+	Symptoms = document.getElementById("Symptoms").value;
+	writeUserData(Name, date, Temperature, Heartbeat, Disease, Prescription, Symptoms);
+}
+
+function Refresh1(){
+	firebase.database().ref('/Beat').once('value').then(function(snapshot) {
+	var SymptomsL = snapshot.val();
+	document.getElementById("Heartbeat").value = SymptomsL
+	//document.write(SymptomsL)
+
+	});
+}
+
+function Refresh2(){
+	firebase.database().ref('/Temp').once('value').then(function(snapshot) {
+	var SymptomsT = snapshot.val();
+	document.getElementById("Temperature").value = SymptomsT;
+	//document.write(SymptomsT)
+});
+}
+
+function read() {
+	Name = document.getElementById("Namee").value;
+	date = document.getElementById("datee").value;
+	firebase.database().ref('/' + Name + '/' + date).once('value').then(function(snapshot) {
+	var Symptoms1 = snapshot.val().Disease;
+	var Symptoms2 = snapshot.val().Symptoms;
+	var Symptoms3 = snapshot.val().Prescription;
+	var Symptoms4 = snapshot.val().Temperature;
+	var Symptoms5 = snapshot.val().Heartbeat;
+	document.getElementById("Symptomse").innerHTML = "Disease:  " +  Symptoms1 +"<br>"+ "Symptoms:  " + Symptoms2 +"<br>"+ "Prescription:  " + Symptoms3 +"<br>"+ "Temperature:  " + Symptoms4 +"<br>"+ "Heartbeat:  " + Symptoms5 ;
+  // ...
+});
+
+}
+</script>
+</html>
